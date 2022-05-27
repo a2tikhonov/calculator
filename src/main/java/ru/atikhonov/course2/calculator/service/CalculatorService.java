@@ -1,7 +1,5 @@
 package ru.atikhonov.course2.calculator.service;
 
-import java.io.PrintStream;
-
 public interface CalculatorService {
     String welcome();
 

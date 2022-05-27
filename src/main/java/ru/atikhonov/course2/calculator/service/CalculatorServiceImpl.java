@@ -1,8 +1,6 @@
 package ru.atikhonov.course2.calculator.service;
 
 import org.springframework.stereotype.Service;
-
-import java.io.PrintStream;
 import java.text.DecimalFormat;
 
 @Service
