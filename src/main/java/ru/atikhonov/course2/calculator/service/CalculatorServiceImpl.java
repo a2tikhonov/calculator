@@ -41,7 +41,7 @@ public class CalculatorServiceImpl implements CalculatorService{
         if (num2 == 0) {
             return "Деление на ноль невозможно!";
         }
-        float result = (float) num1 / num2;
+        float result = num1 / num2;
         return print(num1, '/', num2, result);
     }
 
