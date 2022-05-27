@@ -14,7 +14,7 @@ public class CalculatorServiceImpl implements CalculatorService{
     private String print(float num1, char operator, float num2, float result) {
         DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
-        return String.format("%s %c %s = %s%n", format.format(num1), operator,
+        return String.format("%s %c %s = %s", format.format(num1), operator,
                 format.format(num2), format.format(result));
     }
 
