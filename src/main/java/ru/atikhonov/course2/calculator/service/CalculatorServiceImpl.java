@@ -1,48 +1,28 @@
 package ru.atikhonov.course2.calculator.service;
 
 import org.springframework.stereotype.Service;
-import java.text.DecimalFormat;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService{
 
     @Override
-    public String welcome() {
-        return "Добро пожаловать в калькулятор";
-    }
-
-    private String convertToExpression(float num1, char operator, float num2, float result) {
-        DecimalFormat format = new DecimalFormat();
-        format.setDecimalSeparatorAlwaysShown(false);
-        return String.format("%s %c %s = %s", format.format(num1), operator,
-                format.format(num2), format.format(result));
+    public float add(float num1, float num2) {
+        return num1 + num2;
     }
 
     @Override
-    public String add(float num1, float num2) {
-        float result = num1 + num2;
-        return convertToExpression(num1, '+', num2, result);
+    public float substract(float num1, float num2) {
+        return num1 - num2;
     }
 
     @Override
-    public String substract(float num1, float num2) {
-        float result = num1 - num2;
-        return convertToExpression(num1, '-', num2, result);
+    public float multiply(float num1, float num2) {
+        return num1 * num2;
     }
 
     @Override
-    public String multiply(float num1, float num2) {
-        float result = num1 * num2;
-        return convertToExpression(num1, '*', num2, result);
-    }
-
-    @Override
-    public String divide(float num1, float num2) {
-        if (num2 == 0) {
-            return "Деление на ноль невозможно!";
-        }
-        float result = num1 / num2;
-        return convertToExpression(num1, '/', num2, result);
+    public float divide(float num1, float num2) {
+        return num1 / num2;
     }
 
 }
